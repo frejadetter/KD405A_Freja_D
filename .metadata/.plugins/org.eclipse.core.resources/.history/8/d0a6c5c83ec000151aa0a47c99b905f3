@@ -1,0 +1,93 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JTextPane;
+import javax.swing.JMenuBar;
+import javax.swing.JCheckBoxMenuItem;
+import javax.swing.JMenu;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+
+public class assignment1 extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txtMedlemmar;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					assignment1 frame = new assignment1();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public assignment1() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		JMenu mnAkriv = new JMenu("Akriv");
+		menuBar.add(mnAkriv);
+		
+		JCheckBoxMenuItem chckbxmntmSkrivUt = new JCheckBoxMenuItem("Skriv ut");
+		mnAkriv.add(chckbxmntmSkrivUt);
+		
+		JCheckBoxMenuItem chckbxmntmAvsluta = new JCheckBoxMenuItem("Avsluta");
+		mnAkriv.add(chckbxmntmAvsluta);
+		
+		JMenu mnMedlemmar = new JMenu("Medlemmar");
+		menuBar.add(mnMedlemmar);
+		
+		JCheckBoxMenuItem chckbxmntmNyMedlem = new JCheckBoxMenuItem("Ny medlem");
+		mnMedlemmar.add(chckbxmntmNyMedlem);
+		
+		JCheckBoxMenuItem chckbxmntmAllaMedlemmar = new JCheckBoxMenuItem("Alla medlemmar");
+		mnMedlemmar.add(chckbxmntmAllaMedlemmar);
+		
+		JCheckBoxMenuItem chckbxmntmHittaMedlem = new JCheckBoxMenuItem("Hitta medlem");
+		mnMedlemmar.add(chckbxmntmHittaMedlem);
+		
+		JMenu mnHjlp = new JMenu("Hjälp");
+		menuBar.add(mnHjlp);
+		
+		JCheckBoxMenuItem chckbxmntmHjlp = new JCheckBoxMenuItem("Hjälp");
+		mnHjlp.add(chckbxmntmHjlp);
+		
+		JCheckBoxMenuItem chckbxmntmOmProgrammet = new JCheckBoxMenuItem("Om programmet");
+		mnHjlp.add(chckbxmntmOmProgrammet);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		txtMedlemmar = new JTextField();
+		txtMedlemmar.setText("Medlemmar ");
+		txtMedlemmar.setBounds(6, 6, 163, 26);
+		contentPane.add(txtMedlemmar);
+		txtMedlemmar.setColumns(10);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 36, 160, 214);
+		contentPane.add(scrollPane);
+		
+		JTextPane txtpnAnnaAndersonGustav = new JTextPane();
+		scrollPane.setViewportView(txtpnAnnaAndersonGustav);
+		txtpnAnnaAndersonGustav.setText("Anna Anderson\nGustav Josefson\nPetter Alzar \nJohanna Trädgårdar\nAnna Anderson\nGustav Josefson\nPetter Alzar \nJohanna Trädgårdar\nAnna Anderson\nGustav Josefson\nPetter Alzar \nJohanna Trädgårdar\nAnna Anderson\nGustav Josefson\nPetter Alzar \nJohanna Trädgårdar\nAnna Anderson\n");
+	}
+}

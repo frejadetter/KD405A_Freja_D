@@ -1,0 +1,143 @@
+import java.awt.BorderLayout;
+import java.awt.EventQueue;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+import javax.swing.JTextPane;
+import javax.swing.JMenuBar;
+import javax.swing.JCheckBoxMenuItem;
+import javax.swing.JMenu;
+import javax.swing.JScrollPane;
+import javax.swing.JTextField;
+import javax.swing.JLabel;
+import java.awt.Font;
+
+public class assignment1 extends JFrame {
+
+	private JPanel contentPane;
+	private JTextField txtPetterAlzar;
+	private JTextField textField;
+	private JTextField txtLngavgen;
+
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					assignment1 frame = new assignment1();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public assignment1() {
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		JMenu mnAkriv = new JMenu("Akriv");
+		menuBar.add(mnAkriv);
+		
+		JCheckBoxMenuItem chckbxmntmSkrivUt = new JCheckBoxMenuItem("Skriv ut");
+		mnAkriv.add(chckbxmntmSkrivUt);
+		
+		JCheckBoxMenuItem chckbxmntmAvsluta = new JCheckBoxMenuItem("Avsluta");
+		mnAkriv.add(chckbxmntmAvsluta);
+		
+		JMenu mnMedlemmar = new JMenu("Medlemmar");
+		menuBar.add(mnMedlemmar);
+		
+		JCheckBoxMenuItem chckbxmntmNyMedlem = new JCheckBoxMenuItem("Ny medlem");
+		mnMedlemmar.add(chckbxmntmNyMedlem);
+		
+		JCheckBoxMenuItem chckbxmntmAllaMedlemmar = new JCheckBoxMenuItem("Alla medlemmar");
+		mnMedlemmar.add(chckbxmntmAllaMedlemmar);
+		
+		JCheckBoxMenuItem chckbxmntmHittaMedlem = new JCheckBoxMenuItem("Hitta medlem");
+		mnMedlemmar.add(chckbxmntmHittaMedlem);
+		
+		JMenu mnHjlp = new JMenu("Hjälp");
+		menuBar.add(mnHjlp);
+		
+		JCheckBoxMenuItem chckbxmntmHjlp = new JCheckBoxMenuItem("Hjälp");
+		mnHjlp.add(chckbxmntmHjlp);
+		
+		JCheckBoxMenuItem chckbxmntmOmProgrammet = new JCheckBoxMenuItem("Om programmet");
+		mnHjlp.add(chckbxmntmOmProgrammet);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 36, 130, 214);
+		contentPane.add(scrollPane);
+		
+		JTextPane txtpnAnnaAndersonGustav = new JTextPane();
+		txtpnAnnaAndersonGustav.setFont(new Font("SansSerif", Font.PLAIN, 11));
+		scrollPane.setViewportView(txtpnAnnaAndersonGustav);
+		txtpnAnnaAndersonGustav.setText("Anna Anderson\nGustav Josefson\nPetter Alzar \nJohanna Trädgårdar\nAnna Anderson\nGustav Josefson\nPetter Alzar \nJohanna Trädgårdar\nAnna Anderson\nGustav Josefson\nPetter Alzar \nJohanna Trädgårdar\nAnna Anderson\nGustav Josefson\nPetter Alzar \nJohanna Trädgårdar\nAnna Anderson\n");
+		
+		JLabel lblNewzjhc = new JLabel("ADRESS");
+		lblNewzjhc.setFont(new Font("SansSerif", Font.BOLD, 11));
+		lblNewzjhc.setBounds(152, 104, 83, 24);
+		contentPane.add(lblNewzjhc);
+		
+		JLabel lblNamn = new JLabel("NAMN");
+		lblNamn.setFont(new Font("SansSerif", Font.BOLD, 11));
+		lblNamn.setBounds(152, 53, 83, 24);
+		contentPane.add(lblNamn);
+		
+		txtPetterAlzar = new JTextField();
+		txtPetterAlzar.setFont(new Font("SansSerif", Font.PLAIN, 11));
+		txtPetterAlzar.setText("Petter Alzar");
+		txtPetterAlzar.setBounds(231, 51, 110, 26);
+		contentPane.add(txtPetterAlzar);
+		txtPetterAlzar.setColumns(10);
+		
+		JLabel label = new JLabel("PERSON NR.");
+		label.setFont(new Font("SansSerif", Font.BOLD, 11));
+		label.setBounds(152, 77, 83, 24);
+		contentPane.add(label);
+		
+		JLabel lblPostNr = new JLabel("POST AD.");
+		lblPostNr.setFont(new Font("SansSerif", Font.BOLD, 11));
+		lblPostNr.setBounds(152, 127, 83, 24);
+		contentPane.add(lblPostNr);
+		
+		JLabel lblMobilNr = new JLabel("MOBIL NR.");
+		lblMobilNr.setFont(new Font("SansSerif", Font.BOLD, 11));
+		lblMobilNr.setBounds(152, 164, 83, 24);
+		contentPane.add(lblMobilNr);
+		
+		JLabel lblEmail = new JLabel("EMAIL");
+		lblEmail.setFont(new Font("SansSerif", Font.BOLD, 11));
+		lblEmail.setBounds(152, 194, 83, 24);
+		contentPane.add(lblEmail);
+		
+		textField = new JTextField();
+		textField.setText("790910-3342");
+		textField.setFont(new Font("SansSerif", Font.PLAIN, 11));
+		textField.setColumns(10);
+		textField.setBounds(231, 75, 110, 26);
+		contentPane.add(textField);
+		
+		txtLngavgen = new JTextField();
+		txtLngavgen.setText("Långavägen 4");
+		txtLngavgen.setFont(new Font("SansSerif", Font.PLAIN, 11));
+		txtLngavgen.setColumns(10);
+		txtLngavgen.setBounds(231, 113, 110, 26);
+		contentPane.add(txtLngavgen);
+	}
+}
