@@ -87,7 +87,6 @@ private JTextArea textArea;
 		JButton button_3 = new JButton("4");
 		button_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				minMiniräknare.numberButtonPressed(4);
 				textArea.append("4");
 			}
 		});
@@ -98,7 +97,6 @@ private JTextArea textArea;
 		JButton button_4 = new JButton("1");
 		button_4.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				minMiniräknare.numberButtonPressed(1);
 				textArea.append("1");
 			}
 		});
@@ -109,7 +107,6 @@ private JTextArea textArea;
 		JButton button_5 = new JButton("0");
 		button_5.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				minMiniräknare.numberButtonPressed(0);
 				textArea.append("0");
 			}
 		});
@@ -120,7 +117,6 @@ private JTextArea textArea;
 		JButton button_6 = new JButton("8");
 		button_6.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				minMiniräknare.numberButtonPressed(8);
 				textArea.append("8");
 			}
 		});
@@ -130,7 +126,6 @@ private JTextArea textArea;
 		JButton button_7 = new JButton("5");
 		button_7.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				minMiniräknare.numberButtonPressed(5);
 				textArea.append("5");
 			}
 		});
@@ -141,7 +136,6 @@ private JTextArea textArea;
 		JButton button_8 = new JButton("2");
 		button_8.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				minMiniräknare.numberButtonPressed(2);
 				textArea.append("2");
 			}
 		});
@@ -151,7 +145,6 @@ private JTextArea textArea;
 		JButton button_9 = new JButton("9");
 		button_9.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				minMiniräknare.numberButtonPressed(9);
 				textArea.append("9");
 			}
 		});
@@ -162,7 +155,6 @@ private JTextArea textArea;
 		JButton button_10 = new JButton("6");
 		button_10.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				minMiniräknare.numberButtonPressed(6);
 				textArea.append("6");
 			}
 		});
@@ -173,7 +165,6 @@ private JTextArea textArea;
 		JButton button_11 = new JButton("3");
 		button_11.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				minMiniräknare.numberButtonPressed(3);
 				textArea.append("3");
 			}
 		});
@@ -195,7 +186,6 @@ private JTextArea textArea;
 		JButton button_1 = new JButton("7");
 		button_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				minMiniräknare.numberButtonPressed(7);
 				textArea.append("7");
 			}
 		});

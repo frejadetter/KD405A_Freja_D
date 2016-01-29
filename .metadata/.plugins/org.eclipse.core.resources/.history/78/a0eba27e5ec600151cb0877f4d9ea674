@@ -11,23 +11,6 @@ public class House {
 		
 		public House(int yearBuilt,int size){
 		
-			if (size < minSize){
-				size = minSize;
-			}
-			
-			if (size > maxSize){
-				size = maxSize;
-			}
-			
-			if (yearBuilt < minYear){
-				yearBuilt = minYear;
-			}
-			
-			if (yearBuilt > maxYear){
-				yearBuilt = maxYear;
-			}
-			
-			
 			this.yearBuilt = yearBuilt;
 			this.size = size; 
 			

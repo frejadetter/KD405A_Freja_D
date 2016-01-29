@@ -31,13 +31,6 @@ public class Miniräknare {
 	}
 	
 	
-	public void clear(){
-		this.operator = "";
-		this.result = 0;
-		this.operand = 0;
-	}
-	
-	
 	public void plus(){
 		   this.result = this.operand;
 		   this.operand = 0;

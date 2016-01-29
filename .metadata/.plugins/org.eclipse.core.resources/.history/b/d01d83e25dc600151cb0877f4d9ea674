@@ -69,7 +69,7 @@ public class HouseGUI extends JFrame {
 		
 		House house1 = new House(1920,500);
 		House house2 = new House(2000,900);
-		House house3 = new House(1700,100);
+		House house3 = new House(1840,100);
 		
 		
 		

@@ -30,13 +30,11 @@ public class Miniräknare {
 		this.operand = this.operand*10 + number;
 	}
 	
-	
 	public void clear(){
 		this.operator = "";
 		this.result = 0;
 		this.operand = 0;
 	}
-	
 	
 	public void plus(){
 		   this.result = this.operand;
