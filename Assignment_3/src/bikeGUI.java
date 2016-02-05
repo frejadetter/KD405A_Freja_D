@@ -9,6 +9,10 @@ import javax.swing.JTextField;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.Font;
+import javax.swing.SwingConstants;
+import javax.swing.JLabel;
+import java.awt.Color;
 
 public class bikeGUI extends JFrame {
 
@@ -16,6 +20,9 @@ public class bikeGUI extends JFrame {
 	private JTextField textSize;
 	private JTextField textColor;
 	private JTextField textPrice;
+	private JTextField txtSize;
+	private JTextField txtColor;
+	private JTextField txtPrice;
 
 	/**
 	 * Launch the application.
@@ -45,32 +52,72 @@ public class bikeGUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JTextArea textArea = new JTextArea();
-		textArea.setBounds(24, 27, 177, 218);
+		textArea.setBounds(34, 62, 392, 111);
 		contentPane.add(textArea);
 		
 		textSize = new JTextField();
-		textSize.setBounds(213, 27, 168, 42);
+		textSize.setBounds(112, 185, 147, 29);
 		contentPane.add(textSize);
 		textSize.setColumns(10);
 		
 		
 		textColor = new JTextField();
 		textColor.setColumns(10);
-		textColor.setBounds(213, 88, 168, 42);
+		textColor.setBounds(112, 213, 147, 29);
 		contentPane.add(textColor);
 		
 		textPrice = new JTextField();
 		textPrice.setColumns(10);
-		textPrice.setBounds(213, 158, 168, 42);
+		textPrice.setBounds(112, 243, 147, 29);
 		contentPane.add(textPrice);
 		
-		JButton btnNewButton = new JButton("New button");
+		JButton btnNewButton = new JButton("NEW BIKE");
+		btnNewButton.setFont(new Font("Avenir", Font.BOLD, 15));
+		btnNewButton.setForeground(Color.DARK_GRAY);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				BikeStore.addBike(textColor.getText(), Integer.parseInt(textSize.getText()), Integer.parseInt(textPrice.getText()));
+				textArea.setText(BikeStore.getAllBikes1());
+				textColor.setText("");
+				textSize.setText("");
+				textPrice.setText("");
 			}
 		});
-		btnNewButton.setBounds(244, 216, 117, 29);
+		btnNewButton.setBounds(271, 185, 155, 87);
 		contentPane.add(btnNewButton);
+		
+		txtSize = new JTextField();
+		txtSize.setForeground(Color.DARK_GRAY);
+		txtSize.setHorizontalAlignment(SwingConstants.CENTER);
+		txtSize.setFont(new Font("Avenir", Font.BOLD, 14));
+		txtSize.setText("SIZE");
+		txtSize.setBounds(34, 185, 66, 26);
+		contentPane.add(txtSize);
+		txtSize.setColumns(10);
+		
+		txtColor = new JTextField();
+		txtColor.setForeground(Color.DARK_GRAY);
+		txtColor.setHorizontalAlignment(SwingConstants.CENTER);
+		txtColor.setFont(new Font("Avenir", Font.BOLD, 14));
+		txtColor.setText("COLOR");
+		txtColor.setColumns(10);
+		txtColor.setBounds(34, 213, 66, 28);
+		contentPane.add(txtColor);
+		
+		txtPrice = new JTextField();
+		txtPrice.setFont(new Font("Avenir", Font.PLAIN, 14));
+		txtPrice.setForeground(Color.DARK_GRAY);
+		txtPrice.setHorizontalAlignment(SwingConstants.CENTER);
+		txtPrice.setText("PRICE");
+		txtPrice.setColumns(10);
+		txtPrice.setBounds(34, 243, 66, 29);
+		contentPane.add(txtPrice);
+		
+		JLabel lblNewLabel = new JLabel("FREJA'S BIKE STORE");
+		lblNewLabel.setForeground(Color.GRAY);
+		lblNewLabel.setFont(new Font("Avenir", Font.PLAIN, 40));
+		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel.setBounds(6, 16, 438, 45);
+		contentPane.add(lblNewLabel);
 	}
 }

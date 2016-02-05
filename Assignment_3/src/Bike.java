@@ -14,9 +14,40 @@ public Bike(String color, int size){
 }
 
 public Bike (String color, int size, int price){
-	this.color = color;
-	this.size = size;
-	this.price = price;
+	
+	for(int i = 0; i<Constants.bikeColors.length; i++){
+		if(0 == color.compareTo(Constants.bikeColors[i].toString())){
+			
+		this.color = color;
+		  break;
+		}else{
+			
+		   this.color = "wrong color";
+		}
+		}
+	
+	
+	
+	if (getSize() > Constants.getMinSize() || getSize() < Constants.getMaxSize()) {
+	
+		this.size = size;
+		
+	}else{ 		
+		this.size = 0;
+		
+	}
+	
+	
+	if (getPrice() > Constants.getMinPrice() || getPrice() < Constants.getMaxPrice()) {
+		System.out.println(getPrice() + " is the wrong price, it should be between "
+				+ Constants.getMinPrice() + "and " + Constants.getMaxPrice() + "\n");
+		
+		this.price = price;
+		
+	}else{
+		
+		this.price = 0; 
+	}
 }
 
 public static String getColor(){

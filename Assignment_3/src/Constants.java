@@ -7,7 +7,7 @@ public class Constants {
 	public static final int MIN_PRICE = 0;
 	public static final int MAX_NUMBER_OF_BIKES = 20;
 
-public static final String[] bikeColors = new String[]{"green", "red", "yellow", "silver", "gold", "purple", "white", "pink", "black", "grey");
+public static final String[] bikeColors = new String[]{"green", "red", "yellow", "silver", "gold", "purple", "white", "pink", "black", "grey"};
 	
 
 public static int getMinSize(){
