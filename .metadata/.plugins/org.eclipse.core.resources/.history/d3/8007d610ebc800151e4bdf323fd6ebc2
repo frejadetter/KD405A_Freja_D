@@ -1,0 +1,18 @@
+import java.util.ArrayList;
+
+public class Main {
+
+	
+	private ArrayList <Bike> allbikes; 
+	
+	public static void main(String[] args) {
+		System.out.println("Detta är ett test");
+		System.out.println("**Start test");
+	
+		
+	}
+
+	
+	
+	
+}

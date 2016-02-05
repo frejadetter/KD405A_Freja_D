@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+
+public class Main {
+	
+	private static ArrayList <Bike> allbikes = new ArrayList<Bike>();
+	private int price;
+	
+	public static void main(String[] args) {
+		
+		for (int i = 0; i < 10; i++){
+			allbikes.add(new Bike ("Red", 230, 100));
+			System.out.println("Bike " + String.valueOf(i) + " has the price " + Bike.getPrice() + " and the size " + Bike.getSize());
+		}
+
+		
+	
+		
+	}
+
+	
+	
+	
+}
