@@ -13,7 +13,6 @@ import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JLabel;
 import java.awt.Color;
-import javax.swing.JScrollPane;
 
 public class bikeGUI extends JFrame {
 
@@ -24,7 +23,6 @@ public class bikeGUI extends JFrame {
 	private JTextField txtSize;
 	private JTextField txtColor;
 	private JTextField txtPrice;
-	private JScrollPane scrollPane;
 
 	/**
 	 * Launch the application.
@@ -52,16 +50,13 @@ public class bikeGUI extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
-		scrollPane = new JScrollPane();
-		scrollPane.setBounds(34, 62, 392, 111);
-		contentPane.add(scrollPane);
 
 		JTextArea textArea = new JTextArea();
-		scrollPane.setViewportView(textArea);
 		textArea.setBackground(Color.WHITE);
 		textArea.setForeground(Color.GRAY);
 		textArea.setFont(new Font("Avenir", Font.PLAIN, 15));
+		textArea.setBounds(34, 62, 392, 111);
+		contentPane.add(textArea);
 
 		textSize = new JTextField();
 		textSize.setBounds(112, 185, 147, 29);
@@ -83,7 +78,8 @@ public class bikeGUI extends JFrame {
 		btnNewButton.setForeground(Color.DARK_GRAY);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				BikeStore.addBike(textColor.getText(), Integer.parseInt(textSize.getText()),Integer.parseInt(textPrice.getText()));
+				BikeStore.addBike(textColor.getText(), Integer.parseInt(textSize.getText()),
+						Integer.parseInt(textPrice.getText()));
 				textArea.setText(BikeStore.getAllBikes1());
 				textColor.setText("");
 				textSize.setText("");

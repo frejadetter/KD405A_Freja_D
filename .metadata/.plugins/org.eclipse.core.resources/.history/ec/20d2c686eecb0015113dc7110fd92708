@@ -25,18 +25,18 @@ public class Bike {
 			}
 		}
 
-		if (size >= Constants.MIN_SIZE && size <= Constants.MAX_SIZE) {
+		if (getSize() > Constants.getMinSize() || getSize() < Constants.getMaxSize()) {
 
 			this.size = size;
 
 		} else {
-			
 			this.size = 0;
 
 		}
 
-		if (price >= Constants.MIN_PRICE && price <= Constants.MAX_PRICE) {
-	
+		if (getPrice() > Constants.getMinPrice() || getPrice() < Constants.getMaxPrice()) {
+			System.out.println(getPrice() + " is the wrong price, it should be between " + Constants.getMinPrice()
+					+ "and " + Constants.getMaxPrice() + "\n");
 
 			this.price = price;
 

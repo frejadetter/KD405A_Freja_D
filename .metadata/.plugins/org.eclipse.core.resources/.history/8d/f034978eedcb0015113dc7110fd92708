@@ -83,7 +83,8 @@ public class bikeGUI extends JFrame {
 		btnNewButton.setForeground(Color.DARK_GRAY);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				BikeStore.addBike(textColor.getText(), Integer.parseInt(textSize.getText()),Integer.parseInt(textPrice.getText()));
+				BikeStore.addBike(textColor.getText(), Integer.parseInt(textSize.getText()),
+						Integer.parseInt(textPrice.getText()));
 				textArea.setText(BikeStore.getAllBikes1());
 				textColor.setText("");
 				textSize.setText("");
