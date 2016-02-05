@@ -50,33 +50,36 @@ public class bikeGUI extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JTextArea textArea = new JTextArea();
+		textArea.setBackground(Color.WHITE);
+		textArea.setForeground(Color.GRAY);
+		textArea.setFont(new Font("Avenir", Font.PLAIN, 15));
 		textArea.setBounds(34, 62, 392, 111);
 		contentPane.add(textArea);
-		
+
 		textSize = new JTextField();
 		textSize.setBounds(112, 185, 147, 29);
 		contentPane.add(textSize);
 		textSize.setColumns(10);
-		
-		
+
 		textColor = new JTextField();
 		textColor.setColumns(10);
 		textColor.setBounds(112, 213, 147, 29);
 		contentPane.add(textColor);
-		
+
 		textPrice = new JTextField();
 		textPrice.setColumns(10);
 		textPrice.setBounds(112, 243, 147, 29);
 		contentPane.add(textPrice);
-		
+
 		JButton btnNewButton = new JButton("NEW BIKE");
 		btnNewButton.setFont(new Font("Avenir", Font.BOLD, 15));
 		btnNewButton.setForeground(Color.DARK_GRAY);
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				BikeStore.addBike(textColor.getText(), Integer.parseInt(textSize.getText()), Integer.parseInt(textPrice.getText()));
+				BikeStore.addBike(textColor.getText(), Integer.parseInt(textSize.getText()),
+						Integer.parseInt(textPrice.getText()));
 				textArea.setText(BikeStore.getAllBikes1());
 				textColor.setText("");
 				textSize.setText("");
@@ -85,7 +88,7 @@ public class bikeGUI extends JFrame {
 		});
 		btnNewButton.setBounds(271, 185, 155, 87);
 		contentPane.add(btnNewButton);
-		
+
 		txtSize = new JTextField();
 		txtSize.setForeground(Color.DARK_GRAY);
 		txtSize.setHorizontalAlignment(SwingConstants.CENTER);
@@ -94,7 +97,7 @@ public class bikeGUI extends JFrame {
 		txtSize.setBounds(34, 185, 66, 26);
 		contentPane.add(txtSize);
 		txtSize.setColumns(10);
-		
+
 		txtColor = new JTextField();
 		txtColor.setForeground(Color.DARK_GRAY);
 		txtColor.setHorizontalAlignment(SwingConstants.CENTER);
@@ -103,7 +106,7 @@ public class bikeGUI extends JFrame {
 		txtColor.setColumns(10);
 		txtColor.setBounds(34, 213, 66, 28);
 		contentPane.add(txtColor);
-		
+
 		txtPrice = new JTextField();
 		txtPrice.setFont(new Font("Avenir", Font.PLAIN, 14));
 		txtPrice.setForeground(Color.DARK_GRAY);
@@ -112,7 +115,7 @@ public class bikeGUI extends JFrame {
 		txtPrice.setColumns(10);
 		txtPrice.setBounds(34, 243, 66, 29);
 		contentPane.add(txtPrice);
-		
+
 		JLabel lblNewLabel = new JLabel("FREJA'S BIKE STORE");
 		lblNewLabel.setForeground(Color.GRAY);
 		lblNewLabel.setFont(new Font("Avenir", Font.PLAIN, 40));

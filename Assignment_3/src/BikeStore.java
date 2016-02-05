@@ -1,21 +1,22 @@
 import java.util.ArrayList;
 
 public class BikeStore {
-	
-private static ArrayList<Bike> allBikes = new ArrayList<Bike>();
-public static String getAllBikes1(){
-	
-	String returnString = " ";
-	for (int i = 0; i < allBikes.size(); i++){
-		returnString += ("bikes " + (i+1) + "is the size " + allBikes.get(i).getSize() + "and is the color" + allBikes.get(i).getColor() + " and has the price " + allBikes.get(i).getPrice() + "\n");
+
+	/** Returns info if all bikes are String */
+	private static ArrayList<Bike> allBikes = new ArrayList<Bike>();
+
+	public static String getAllBikes1() {
+
+		String returnString = " ";
+		for (int i = 0; i < allBikes.size(); i++) {
+			returnString += ("bikes " + (i + 1) + " is " + allBikes.get(i).getSize() +"" + " inches,  "+ "\n"+ "has the color "
+					+ allBikes.get(i).getColor() + "\n" + "and costs " + allBikes.get(i).getPrice() + " dollars" + "\n");
+		}
+		return returnString;
 	}
-	return returnString;
-}
 
-	public static void addBike(String color, int size, int price){
-	allBikes.add(new Bike(color, size, price));
-}
+	public static void addBike(String color, int size, int price) {
+		allBikes.add(new Bike(color, size, price));
+	}
 
-
-	
 }

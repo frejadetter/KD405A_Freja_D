@@ -1,0 +1,72 @@
+
+public class Bike {
+
+	private static String color;
+	private static int price;
+	private static int size;
+	
+
+
+public Bike(String color, int size){
+	this.color = color;
+	this.size = size;
+	
+}
+
+public Bike (String color, int size, int price){
+	
+	for(int i = 0; i<Constants.bikeColors.length; i++){
+		if(0 == color.compareTo(Constants.bikeColors[i].toString())){
+			
+		this.color = color;
+		  break;
+		}else{
+			
+		   this.color = "wrong color";
+		}
+		}
+	
+	
+	
+	if (getSize() > Constants.getMinSize() || getSize() < Constants.getMaxSize()) {
+	
+		this.size = size;
+		
+	}else{ 		
+		this.size = 0;
+		
+	}
+	
+	
+	if (getPrice() > Constants.getMinPrice() || getPrice() < Constants.getMaxPrice()) {
+		System.out.println(getPrice() + " is the wrong price, it should be between "
+				+ Constants.getMinPrice() + "and " + Constants.getMaxPrice() + "\n");
+		
+		this.price = price;
+		
+	}else{
+		
+		this.price = 0; 
+	}
+}
+
+public static String getColor(){
+	return color;
+	
+}
+
+public static int getSize(){
+	return size;
+}
+
+public static int getPrice(){
+	return price;
+}
+
+public void setPrice (int price){
+	this.price = price;
+}
+
+
+} 
+
